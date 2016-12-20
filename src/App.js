@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import ProductCard from './ProductCard';
+import Navigation from './Navigation';
 
-//Normally an API call on app initialization , that I would populate to sessionStorage, or Redux 
+//Normally an API call on app initialization, that I would populate to sessionStorage or a Redux store
 import products from './products';
 
 
@@ -14,7 +15,9 @@ class App extends Component {
 
   render() {
     return (
-      <section className='product-list flex flex-wrap vh-100 w-100 mt5 pt2'>
+    <div className="application-root system-sans-serif">
+      <Navigation />
+      <section className='product-list flex flex-wrap vh-100 w-100 pt5'>
         {this.state.productList.map(el => (
           <ProductCard
             colors={el.color_en}
@@ -27,6 +30,7 @@ class App extends Component {
           />
         ))}
       </section>
+    </div>
     );
   }
 }

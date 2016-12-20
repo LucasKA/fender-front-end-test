@@ -1,9 +1,8 @@
 import React from 'react';
 import ImageFallback from 'react-image-fallback';
-import products from './products';
 
 const ProductCard = (props) => (
-  <article className="bg-white w-50-m w-25-l ph2 pb2 pt2 flex flex-column items-center">
+  <article className="bg-white w-50-m w-third-l pa2 flex flex-column items-center">
     <div className="ba b--silver br2">
       <h2 className="f4 fw1 title ph2 tc">
         {props.displayName ?  props.displayName : props.skuName }

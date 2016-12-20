@@ -40,7 +40,7 @@ class App extends Component {
             toggleMenu={this.toggleMenu}
             filterBarToggled={this.state.filterBarToggled}
           />
-          <section className={cn(`filter-bar absolute bg-white fixed-l pt5 shadow-1 vh-100 db-l w-80 w-60-m w-20-l `, {
+          <section className={cn(`filter-bar relative bg-white fixed pt5 shadow-1 vh-100 db-l w-80 w-60-m w-20-l `, {
             "db": this.state.filterBarToggled,
             "dn": !this.state.filterBarToggled,
           })}>
